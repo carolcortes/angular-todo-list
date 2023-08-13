@@ -1,0 +1,29 @@
+.header {
+  align-items: center;
+  background: #212227;
+  color: #ffffff;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  user-select: none;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title h1 {
+  text-transform: uppercase;
+}
+
+.header-title p {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.header-logo {
+  height: auto;
+  width: 3.5rem;
+}
