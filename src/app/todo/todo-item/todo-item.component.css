@@ -1,0 +1,18 @@
+.todo-item {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.todo-item_content {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.todo-item_buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
