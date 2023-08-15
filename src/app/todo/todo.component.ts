@@ -9,6 +9,7 @@ import { TodoService } from '../shared/services/todo.service';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
+  showCompletedTasks: boolean = true;
 
   constructor(private todoService: TodoService) { }
 
@@ -50,5 +51,15 @@ export class TodoComponent implements OnInit {
   clearCompletedTasks() {
     this.todoService.clearCompletedTasks();
     this.loadTodos();
+  }
+
+  toggleCompletedTasks() {
+    this.showCompletedTasks = !this.showCompletedTasks;
+    this.loadTodos();
+    this.todos = this.filteredTodos();
+  }
+
+  filteredTodos() {
+    return this.showCompletedTasks ? this.todos : this.todos.filter(todo => !todo.completed);
   }
 }

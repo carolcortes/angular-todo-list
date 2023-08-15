@@ -3,6 +3,9 @@
     <app-new-task></app-new-task>
   </div>
   <div class="todo-buttons">
+    <button class="toggle-button" (click)="toggleCompletedTasks()">
+      {{ showCompletedTasks ? 'HIDE COMPLETED TASKS' : 'SHOW COMPLETED TASKS' }}
+    </button>
     <button (click)="clearCompletedTasks()">CLEAR COMPLETED TASKS</button>
     <button (click)="clearAll()">CLEAR ALL</button>
   </div>

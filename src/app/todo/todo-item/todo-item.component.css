@@ -19,6 +19,7 @@
 .todo-item_content input[type="checkbox"] {
   margin-right: 0.7rem;
   cursor: pointer;
+  accent-color: #B5B5BA;
 }
 
 .todo-item_content label.completed {
@@ -32,6 +33,10 @@
   cursor: pointer;
 }
 
-.todo-item_delete button i {
+.fa-trash-alt {
   color: #413F3F;
+}
+
+.fa-trash-alt:hover {
+  color: rgba(65, 63, 63, 0.62);
 }

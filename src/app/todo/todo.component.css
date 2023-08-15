@@ -35,6 +35,10 @@
   margin-right: 5rem;
 }
 
+.toggle-button {
+  width: 13rem;
+}
+
 .todo-buttons button {
   background-color: transparent;
   border: none;
