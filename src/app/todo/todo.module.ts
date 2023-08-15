@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { TodoRoutingModule } from './todo-routing.module';
 import { TodoComponent } from './todo.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 
@@ -12,7 +11,6 @@ import { NewTaskComponent } from './new-task/new-task.component';
 @NgModule({
   declarations: [
     TodoComponent,
-    TodoListComponent,
     TodoItemComponent,
     NewTaskComponent,
   ],
