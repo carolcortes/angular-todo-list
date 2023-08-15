@@ -15,14 +15,13 @@ export class NewTaskComponent {
   addTask() {
     if (this.newTaskTitle.trim() !== '') {
       const newTodo: Todo = {
-        id: 0,
+        id: this.todoService.getTodoNewId(),
         title: this.newTaskTitle,
         completed: false
       };
 
       this.todoService.addTodo(newTodo);
       this.newTaskTitle = '';
-      console.log(this.todoService.getTodos())
     }
   }
 }

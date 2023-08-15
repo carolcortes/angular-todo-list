@@ -1,14 +1,11 @@
 <div class="todo-item">
   <div class="todo-item_content">
-    <input type="checkbox" [checked]="todo.completed" />
-    <span>{{ todo.title }}</span>
+    <input type="checkbox" [(ngModel)]="todo.completed" (change)="onTaskChecked()" />
+    <span
+      [ngClass]="{'completed': todo.completed, 'incomplete': !todo.completed}"
+    >{{ todo.title }}</span>
   </div>
-  <div class="todo-item_buttons">
-    <button>
-      <i class="fas fa-edit"></i>
-    </button>
-    <button>
-      <i class="fas fa-trash-alt"></i>
-    </button>
-  </div>
+  <button class="todo-item_delete" (click)="deleteTodo()">
+    <i class="fas fa-trash-alt"></i>
+  </button>
 </div>

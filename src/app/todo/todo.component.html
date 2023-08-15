@@ -4,7 +4,10 @@
   </div>
   <div class="todo-list_container">
     <div class="todo-list_todo">
-      <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+      <app-todo-item
+        *ngFor="let todo of todos"
+        [todo]="todo"
+      ></app-todo-item>
     </div>
   </div>
 </div>

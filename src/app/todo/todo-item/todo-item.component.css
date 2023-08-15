@@ -1,6 +1,5 @@
 .todo-item {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -11,8 +10,26 @@
   margin-right: 1rem;
 }
 
-.todo-item_buttons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.todo-item_content span {
+  font-size: 0.85rem;
+  cursor: default;
+}
+
+.todo-item_content input[type="checkbox"] {
+  margin-right: 0.7rem;
+}
+
+.todo-item_content span.completed {
+  color: #B5B5BA;
+  text-decoration: line-through;
+}
+
+.todo-item_delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-item_delete button i {
+  color: #413F3F;
 }
