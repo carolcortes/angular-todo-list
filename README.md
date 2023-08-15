@@ -3,6 +3,7 @@
 
 > Bem-vindo ao repositório do meu primeiro projeto Angular! Nesta aplicação você poderá criar, editar e gerenciar suas tarefas diárias de maneira eficiente.
 
+- Protótipo: [Figma](https://www.figma.com/proto/8St1VQcuglkGEOwdYzon0F/Angular-To-Do-List?type=design&node-id=1-2&t=pHHDyG6myqMyKUFD-1&scaling=min-zoom&page-id=0%3A1&mode=design)
 - A aplicação pode ser acessada através do site: [Angular To Do List](https://carolcortes.github.io/angular-todo-list/#/todo)
 
 ## Habilidades:
