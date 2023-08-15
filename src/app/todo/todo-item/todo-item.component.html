@@ -1,9 +1,14 @@
 <div class="todo-item">
   <div class="todo-item_content">
-    <input type="checkbox" [(ngModel)]="todo.completed" (change)="onTaskChecked()" />
-    <span
+    <input
+      id="task-{{ todo.id }}"
+      type="checkbox" [(ngModel)]="todo.completed"
+      (change)="onTaskChecked()"
+    />
+    <label
+      for="task-{{ todo.id }}"
       [ngClass]="{'completed': todo.completed, 'incomplete': !todo.completed}"
-    >{{ todo.title }}</span>
+    >{{ todo.title }}</label>
   </div>
   <button class="todo-item_delete" (click)="deleteTodo()">
     <i class="fas fa-trash-alt"></i>

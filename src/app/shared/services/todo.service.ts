@@ -37,6 +37,7 @@ export class TodoService {
 
   addTodo(newTodo: Todo): void {
     this.todos.push(newTodo);
+    this.sortTodos();
     this.updateLocalStorageAndSave();
   }
 
@@ -44,6 +45,7 @@ export class TodoService {
     const index = this.todos.findIndex(todo => todo.id === updatedTodo.id);
     if (index !== -1) {
       this.todos[index] = updatedTodo;
+      this.sortTodos();
       this.updateLocalStorageAndSave();
     }
   }
@@ -52,11 +54,24 @@ export class TodoService {
     const index = this.todos.findIndex(todo => todo.id === todoId);
     if (index !== -1) {
       this.todos.splice(index, 1);
+      this.sortTodos();
       this.updateLocalStorageAndSave();
     }
   }
 
   getTodoNewId(): number {
     return this.todos.reduce((maxId, todo) => Math.max(maxId, todo.id), 0) + 1;
+  }
+
+  sortTodos() {
+    this.todos.sort((a, b) => {
+      if (a.completed && !b.completed) {
+        return 1;
+      } else if (!a.completed && b.completed) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
   }
 }

@@ -6,20 +6,22 @@
 .todo-item_content {
   display: flex;
   align-items: baseline;
-  gap: 0.5rem;
+  gap: rem;
   margin-right: 1rem;
 }
 
-.todo-item_content span {
+.todo-item_content label {
   font-size: 0.85rem;
   cursor: default;
+  user-select: none;
 }
 
 .todo-item_content input[type="checkbox"] {
   margin-right: 0.7rem;
+  cursor: pointer;
 }
 
-.todo-item_content span.completed {
+.todo-item_content label.completed {
   color: #B5B5BA;
   text-decoration: line-through;
 }

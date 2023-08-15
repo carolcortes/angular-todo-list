@@ -9,8 +9,6 @@ import { TodoService } from '../shared/services/todo.service';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
-  openTodos: Todo[] = [];
-  doneTodos: Todo[] = [];
 
   constructor(private todoService: TodoService) { }
 
@@ -21,13 +19,7 @@ export class TodoComponent implements OnInit {
   loadTodos() {
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos;
-      this.separateTasks();
     });
-  }
-
-  separateTasks() {
-    this.openTodos = this.todos.filter(todo => !todo.completed);
-    this.doneTodos = this.todos.filter(todo => todo.completed);
   }
 
   addTodo(newTodoTitle: string) {
@@ -38,21 +30,13 @@ export class TodoComponent implements OnInit {
     };
 
     this.todoService.addTodo(newTodo);
-    this.separateTasks();
   }
 
   updateTodo(updatedTodo: Todo) {
     this.todoService.updateTodo(updatedTodo);
-    this.separateTasks();
   }
 
   deleteTodo(todoId: number) {
     this.todoService.deleteTodo(todoId);
-    this.separateTasks();
-  }
-
-  onTaskChecked(updatedTodo: Todo) {
-    this.todoService.updateTodo(updatedTodo);
-    this.separateTasks();
   }
 }
