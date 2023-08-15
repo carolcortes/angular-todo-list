@@ -45,10 +45,15 @@ ng serve
 
 ### Estrutura do projeto
 `src/app/app.component.html:` Template HTML principal.
+
 `src/app/app-routing.module.ts:` Define as rotas da aplicação.
+
 `src/app/layout:` Contém os componentes gerais da aplicação.
+
 `src/app/todo:` Contém os componentes relacionados à funcionalidade principal da lista de tarefas.
+
 `src/app/shared/services:` Contém os serviços que gerenciam a lógica de negócios.
+
 `src/app/shared/models:` Define as estruturas de dados utilizadas na aplicação.
 
 ###### Projeto desenvolvido por: [Carol Cortes](https://github.com/carolcortes)
