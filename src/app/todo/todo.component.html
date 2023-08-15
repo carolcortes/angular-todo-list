@@ -2,6 +2,10 @@
   <div class="todo-form">
     <app-new-task></app-new-task>
   </div>
+  <div class="todo-buttons">
+    <button (click)="clearCompletedTasks()">CLEAR COMPLETED TASKS</button>
+    <button (click)="clearAll()">CLEAR ALL</button>
+  </div>
   <div class="todo-list_container">
     <div class="todo-list_todo">
       <app-todo-item

@@ -25,6 +25,7 @@ export class TodoService {
       { id: 4, title: 'give up about the exemples (you already have them)', completed: false },
       { id: 5, title: "what can I do next? Let's do a new project! :)", completed: false }
     ];
+    this.sortTodos();
   }
 
   getTodos(): Observable<Todo[]> {
@@ -73,5 +74,15 @@ export class TodoService {
         return 0;
       }
     });
+  }
+
+  clearAll() {
+    this.todos = [];
+    this.updateLocalStorageAndSave();
+  }
+
+  clearCompletedTasks() {
+    this.todos = this.todos.filter(({ completed }) => completed === false);
+    this.updateLocalStorageAndSave();
   }
 }

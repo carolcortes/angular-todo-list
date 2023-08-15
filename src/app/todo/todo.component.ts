@@ -39,4 +39,16 @@ export class TodoComponent implements OnInit {
   deleteTodo(todoId: number) {
     this.todoService.deleteTodo(todoId);
   }
+
+  clearAll() {
+    if (this.todos.length > 0 && confirm('Are you sure you want to clear all tasks?')) {
+      this.todoService.clearAll();
+      this.loadTodos();
+    }
+  }
+
+  clearCompletedTasks() {
+    this.todoService.clearCompletedTasks();
+    this.loadTodos();
+  }
 }
