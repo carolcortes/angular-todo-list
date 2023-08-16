@@ -1,4 +1,4 @@
-# Projeto Lista de Tarefas :pencil:
+# Projeto Lista de Tarefas em Angular :pencil:
 ``Agosto/2023``
 
 > Bem-vindo ao repositório do meu primeiro projeto Angular! Nesta aplicação você poderá criar, editar e gerenciar suas tarefas diárias de maneira eficiente.
